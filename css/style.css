@@ -15,20 +15,6 @@
     --texture: url('https://www.transparenttextures.com/patterns/cubes.png');
 }
 
-body.light-theme {
-    --bg-dark: #f3f4f6;
-    --bg-darker: #e5e7eb;
-    --text-light: #0f172a;
-    --accent-gray: #475569;
-    --card-bg: #ffffff;
-    --card-border: #cbd5e1;
-    --btn-bg: #7577a3;
-    --btn-hover: #6f3bd6;
-    --highlight: #c0a0d4;
-    --texture: none;
-    /* remove dark texture in light mode */
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -40,37 +26,6 @@ body.light-theme {
     margin: auto;
     padding: 40px 20px;
     text-align: center;
-}
-
-.about,
-.mission,
-.team,
-.benefits,
-.contact {
-    margin-bottom: 100px;
-}
-
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.member-card {
-    background: var(--card-bg);
-    padding: 20px;
-    border: 1px solid var(--card-border);
-    border-radius: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 220px;
-    text-align: center;
-}
-
-.member-card img {
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 15px;
 }
 
 .benefits-list {
@@ -117,10 +72,8 @@ body {
 }
 
 header {
-    background: transparent;
     padding: 30px 20px;
     position: relative;
-    z-index: 10;
 }
 
 header::after {
@@ -140,8 +93,7 @@ header h1 {
     text-shadow: 0 0 12px var(--highlight);
     letter-spacing: 5px;
     display: inline-block;
-    margin-left: 20px;
-    flex: 1;
+    padding-left: 20px;
 }
 
 header h1 .highlight {
@@ -151,15 +103,6 @@ header h1 .highlight {
     color: transparent;
     -webkit-text-fill-color: transparent;
     animation: neonFlicker 3s infinite alternate;
-}
-
-.logo {
-    display: inline-block;
-}
-
-.logo img {
-    width: 200px;
-    height: 00px;
 }
 
 @keyframes neonFlicker {
@@ -175,11 +118,9 @@ header h1 .highlight {
 }
 
 .navBar {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 15rem;
-    flex: 2;
 }
 
 .navBar a {

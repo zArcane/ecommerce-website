@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Deus_Ex_Machina - Elevate your tech experience.">
   <meta name="author" content="Deus_Ex_Machina Team">
-  <link rel="stylesheet" href="/css/styleRemade.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="example.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <title>Deus Ex Machina</title>
 </head>
 
 <body>
-
   <header class="hero">
     <div class="overlay">
       <div class="hero-content">
@@ -21,13 +20,10 @@
 
         <div class="navBar">
           <nav>
-            <a href="/shopIndexRemade.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="products.html">Products</a>
-            <a href="/contact.html">Contact</a>
-            <a href="#">Cart</a>
-        </div>
-        <div class="toggleTheme">
-          <button onclick="toggleTheme()">☾ Toggle</button>
+            <a href="contact.html">Contact</a>
+            <a href="deals.html">Deals</a>
         </div>
         </nav>
       </div>
@@ -57,28 +53,6 @@
       duration: 1000,
       once: true
     });
-  </script>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('light-theme');
-    }
-
-    // Select all the product cards
-    const productCards = document.querySelectorAll('.product-grid article');
-
-    // Loop through each card and add an event listener
-    productCards.forEach(card => {
-      const button = card.querySelector('.open-info-btn');
-      if (button) {
-        button.addEventListener('click', () => {
-          const details = card.querySelector('.product-info');
-          details.classList.toggle('open'); // Toggle visibility of the product info
-        });
-      }
-    });
-
-
   </script>
 
 </body>
