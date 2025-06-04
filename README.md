@@ -1,5 +1,5 @@
 <h1 align="center">deus_ex_machina</h1>
-<p align="center"><em>Made with Vision/em></p>
+<p align="center"><em>Made with Vision</em></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-in%20progress-blueviolet?style=flat-square" />
