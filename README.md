@@ -1,4 +1,4 @@
-<h1 align="center"><style="color: purple"deus_ex_machina</h1>
+<h1 style="color: rgb(80, 0, 146);" align="center">deus_ex_machina</h1>
 <p align="center"><em>Digital services engineered for a smarter future</em></p>
 
 <p align="center">
