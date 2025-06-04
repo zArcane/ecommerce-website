@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Deus_Ex_Machina - Elevate your tech experience.">
+  <meta name="author" content="Deus_Ex_Machina Team">
+  <link rel="stylesheet" href="/css/styleRemade.css">
+  <link rel="icon" href="example.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Deus Ex Machina</title>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>deus<span class="highlight">_ex_</span>machina</h1>
+
+        <div class="navBar">
+          <nav>
+            <a href="/shopIndexRemade.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+            <a href="#">Cart</a>
+        </div>
+        <div class="toggleTheme">
+          <button onclick="toggleTheme()">☾ Toggle</button>
+        </div>
+        </nav>
+      </div>
+  </header>
+
+  <main>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Your email address" required>
+          <textarea rows="6" placeholder="Write your message..." required></textarea>
+          <button type="submit" class="cta-button">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deus_Ex_Machina. Designed with <span class="highlight">vision</span>.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+
+    // Select all the product cards
+    const productCards = document.querySelectorAll('.product-grid article');
+
+    // Loop through each card and add an event listener
+    productCards.forEach(card => {
+      const button = card.querySelector('.open-info-btn');
+      if (button) {
+        button.addEventListener('click', () => {
+          const details = card.querySelector('.product-info');
+          details.classList.toggle('open'); // Toggle visibility of the product info
+        });
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>

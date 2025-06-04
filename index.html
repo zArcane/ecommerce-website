@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Deus_Ex_Machina - Elevate your tech experience.">
+  <meta name="author" content="Deus_Ex_Machina Team">
+  <link rel="stylesheet" href="/css/styleRemade.css">
+  <link rel="icon" href="example.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Deus Ex Machina</title>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>deus<span class="highlight">_ex_</span>machina</h1>
+
+        <div class="navBar">
+          <nav>
+            <a href="/shopIndexRemade.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+            <a href="#">Cart</a>
+        </div>
+        <div class="toggleTheme">
+          <button onclick="toggleTheme()">☾ Toggle</button>
+        </div>
+        </nav>
+      </div>
+  </header>
+
+  <main>
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        <h2 class="animate__animated animate__backInLeft">Who We Are</h2>
+        <p>At <strong>Deus_Ex_Machina</strong>, we don’t just build websites — we architect digital futures.
+          We're a creative tech startup driven by the synergy between design and functionality, delivering handcrafted
+          digital solutions that elevate brands and empower users. Whether it's UI/UX design, full-stack development, or
+          digital branding — we turn bold ideas into immersive experiences.</p>
+      </div>
+      <div class="cta-container">
+        <a href="products.html" class="cta-button">Explore the Collection</a>
+      </div>
+    </section>
+
+    <section class="mission" data-aos="fade-right">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>To bridge design, technology, and human experience through innovation. We believe great design is not just
+          seen — it's felt. That’s why our mission is to empower businesses by transforming complexity into clarity and
+          creating digital tools that resonate and inspire.</p>
+      </div>
+    </section>
+
+    <section class="benefits" data-aos="zoom-in">
+      <div class="container">
+        <h2>Why Choose Deus_Ex_Machina?</h2>
+        <ul class="benefits-list">
+          <li><strong>🚀 Vision-Driven Design:</strong> We don’t follow trends — our solutions are
+            designed to future-proof your business.</li>
+          <li><strong>🎨 Custom, Not Template:</strong> Every pixel, every line of code — tailored uniquely to your
+            identity. No one-size-fits-all.</li>
+          <li><strong>⚙️ Full Stack Expertise:</strong> From front-end artistry to back-end architecture — our team
+            thrives across the full spectrum.</li>
+          <li><strong>💬 Collaborative Process:</strong> We work *with* you, not just *for* you. Transparent, agile, and
+            deeply human in our approach.</li>
+          <li><strong>🔐 Built on Trust:</strong> We prioritize privacy, performance, and security from day one — your
+            integrity is our baseline.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-container">
+      <div class="cta-text">
+        <h2>Ready to build something extraordinary?</h2>
+        <p>Let’s shape your next story — bold, elegant, and unforgettable. You dream, we design.</p>
+      </div>
+    </section>
+
+    <section class="cta-container">
+      <div>
+        <a href="contact.html" class="cta-button">Let’s Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deus_Ex_Machina. Designed with <span class="highlight">vision</span>.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+
+    // Select all the product cards
+    const productCards = document.querySelectorAll('.product-grid article');
+
+    // Loop through each card and add an event listener
+    productCards.forEach(card => {
+      const button = card.querySelector('.open-info-btn');
+      if (button) {
+        button.addEventListener('click', () => {
+          const details = card.querySelector('.product-info');
+          details.classList.toggle('open'); // Toggle visibility of the product info
+        });
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>

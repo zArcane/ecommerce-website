@@ -1,0 +1,14 @@
+- Header con navbar
+- Slider, tiene que tener el componente carousel con 3 slides
+- seccion de productos destacados y seccion de ofertas
+- elementos bien posicionados con flexbox o grid
+- footer funcional
+
+- fonts de Google Fonts
+- tiene que tener imágenes
+- responsive
+- disponible online
+
+estructura:
+    - carpeta principal llamada ecommerce-website
+    - organizado en subcarpetas (css, img, pages para html, etc)
