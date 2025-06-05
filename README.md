@@ -37,7 +37,6 @@ This project was developed as the **final deliverable** for my web development c
 | HTML5        | Page structure          |
 | CSS3         | Styling & layout        |
 | Google Fonts | Typography              |
-|----------------------------------------|
 
 ---
 
