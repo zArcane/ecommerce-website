@@ -71,7 +71,7 @@ header::after {
     opacity: 0.4;
 }
 
-header h1 {
+.hero-content h1 {
     font-size: 2.6em;
     color: var(--highlight);
     text-shadow: 0 0 12px var(--highlight);
@@ -80,7 +80,7 @@ header h1 {
     padding-left: 20px;
 }
 
-header h1 .highlight {
+.hero-content h1 .highlight {
     background: linear-gradient(90deg, #c084fc, #9333ea);
     background-clip: text;
     -webkit-background-clip: text;
@@ -214,6 +214,16 @@ img {
     margin-bottom: 20px;
 }
 
+.product-details p {
+    margin-block: 1lh;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent-gray);
+}
+
 .open-info-btn {
     background: linear-gradient(90deg, var(--btn-bg), var(--btn-hover));
     color: #fff;
@@ -272,17 +282,15 @@ footer::before {
     border-radius: 3px;
 }
 
-
-/* responsive */
-@media (max-width: 468px) {
+/* responsive (en base a iPhone 14 Pro Max) */
+@media (max-width: 400px) {
     .container {
         padding: 20px 10px;
     }
 
-    header h1 {
+    .hero-content h1 {
         font-size: 2em;
-        padding-left: 10px;
-        letter-spacing: 2px;
+        letter-spacing: 2px
     }
 
     .navBar {
@@ -308,6 +316,61 @@ footer::before {
 
     article {
         width: 90%;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 30px 10px;
+    }
+}
+
+/* responsive para celus pequeños */
+@media (min-width: 320px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6em;
+        padding: 0 10px;
+    }
+
+    .navBar {
+        flex-direction: column;
+    }
+
+    .navBar a {
+        margin: 2px;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 90%;
+    }
+
+    .cta-text h2 {
+        font-size: 1.6em;
+    }
+
+    .cta-text p {
+        text-align: center;
     }
 
     .cta-button {
