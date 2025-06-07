@@ -11,7 +11,6 @@
     --btn-hover: #6f3bd6;
     --highlight: #BD93D8;
     --font-main: 'Orbitron', sans-serif;
-    --glass-blur: blur(10px);
     --texture: url('https://www.transparenttextures.com/patterns/cubes.png');
 }
 
@@ -22,8 +21,68 @@
     font-family: "Orbitron", sans-serif;
 }
 
-/* index.html */
+/* global */
+header {
+    padding: 30px 20px;
+    position: relative;
+}
 
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+    opacity: 0.4;
+}
+
+.hero-content h1 {
+    font-size: 2.4em;
+    color: var(--highlight);
+    text-shadow: 0 0 12px var(--highlight);
+    letter-spacing: 5px;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.hero-content h1 .highlight {
+    background: linear-gradient(90deg, #c084fc, #9333ea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: neonFlicker 3s infinite alternate;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar a {
+    color: var(--accent-gray);
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1.1em;
+    transition: color 0.4s ease;
+}
+
+.navBar a:hover {
+    color: var(--highlight);
+    text-shadow: 0 0 6px var(--highlight);
+}
+
+main {
+    padding: 80px 30px;
+    max-width: 1400px;
+    margin: auto
+}
+
+/* index.html */
 .container {
     max-width: 1000px;
     margin: auto;
@@ -50,90 +109,12 @@ body {
     color: var(--text-light);
     line-height: 1.6;
     background-attachment: fixed;
-    background-size: cover;
-    overflow-x: hidden;
-    transition: background 0.6s, color 0.6s;
-}
-
-header {
-    padding: 30px 20px;
-    position: relative;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--highlight), transparent);
-    opacity: 0.4;
-}
-
-.hero-content h1 {
-    font-size: 2.6em;
-    color: var(--highlight);
-    text-shadow: 0 0 12px var(--highlight);
-    letter-spacing: 5px;
-    display: inline-block;
-    padding-left: 20px;
-}
-
-.hero-content h1 .highlight {
-    background: linear-gradient(90deg, #c084fc, #9333ea);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation: neonFlicker 3s infinite alternate;
-}
-
-/* para dar un efecto de que titila la luz del titulo en el header */
-
-@keyframes neonFlicker {
-    0% {
-        opacity: 0.9;
-        text-shadow: 0 0 6px var(--highlight);
-    }
-
-    100% {
-        opacity: 1;
-        text-shadow: 0 0 16px var(--highlight);
-    }
-}
-
-.navBar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navBar a {
-    color: var(--accent-gray);
-    text-decoration: none;
-    margin: 0 18px;
-    font-size: 1.1em;
-    transition: color 0.4s ease;
-}
-
-.navBar a:hover {
-    color: var(--highlight);
-    text-shadow: 0 0 6px var(--highlight);
-}
-
-main {
-    padding: 80px 30px;
-    max-width: 1400px;
-    margin: auto;
-    backdrop-filter: var(--glass-blur);
 }
 
 section h2 {
     text-align: center;
     font-size: 2.4em;
     color: var(--highlight);
-    margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-block: 1lh;
@@ -146,15 +127,22 @@ section p {
 .cta-container {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    align-items: center;
+    padding: 20px;
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta-button {
-    display: flex;
+    display: inline-block;
     background: linear-gradient(90deg, var(--btn-bg), var(--btn-hover));
     text-decoration: none;
     color: #fff;
-    padding: 14px 10px;
+    padding: 14px 24px;
     font-size: 1em;
     border-radius: 50px;
     cursor: pointer;
@@ -182,11 +170,8 @@ article {
     border-radius: 18px;
     padding: 25px;
     width: 300px;
-    backdrop-filter: var(--glass-blur);
-    transition: all 0.4s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
 article:hover {
@@ -282,6 +267,21 @@ footer::before {
     border-radius: 3px;
 }
 
+
+/* para dar un efecto de que titila la luz del titulo en el header */
+
+@keyframes neonFlicker {
+    0% {
+        opacity: 0.9;
+        text-shadow: 0 0 6px var(--highlight);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 16px var(--highlight);
+    }
+}
+
 /* responsive (en base a iPhone 14 Pro Max) */
 @media (max-width: 400px) {
     .container {
@@ -330,7 +330,7 @@ footer::before {
 }
 
 /* responsive para celus pequeños */
-@media (min-width: 320px) {
+@media (max-width: 320px) {
     .container {
         padding: 20px 10px;
     }
