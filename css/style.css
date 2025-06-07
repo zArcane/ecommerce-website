@@ -19,7 +19,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
 }
+
+/* index.html */
 
 .container {
     max-width: 1000px;
@@ -164,6 +167,8 @@ section p {
     transform: scale(1.1);
 }
 
+/* products.html */
+
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -222,11 +227,13 @@ img {
     box-shadow: 0 0 12px var(--btn-bg);
 }
 
-button:hover {
+.open-info-btn:hover {
     background: linear-gradient(90deg, var(--btn-hover), var(--btn-bg));
     box-shadow: 0 0 20px var(--btn-hover), 0 0 40px var(--btn-hover);
     transform: scale(1.1);
 }
+
+/* contact.html */
 
 .contact h3 {
     color: white;
@@ -236,6 +243,14 @@ button:hover {
     text-decoration: none;
     color: var(--accent-gray)
 }
+
+.carousel-Arc {
+    margin: 0 auto;
+    width: 650px;
+    height: 50%;
+}
+
+/* footer */
 
 footer {
     background: transparent;
@@ -256,6 +271,7 @@ footer::before {
     margin: 0 auto 20px;
     border-radius: 3px;
 }
+
 
 /* responsive */
 @media (max-width: 468px) {
