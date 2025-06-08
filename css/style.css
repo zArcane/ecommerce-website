@@ -328,6 +328,13 @@ footer::before {
         font-size: 0.9em;
     }
 
+    /* no se tendria que hacer así, pero sirve. solo que no se ve el texto en el celu */
+    .carousel-Arc {
+        margin: 0 auto;
+        width: 350px;
+        height: auto;
+    }
+
     footer {
         font-size: 0.8em;
         padding: 30px 10px;
