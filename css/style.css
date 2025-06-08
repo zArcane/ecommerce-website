@@ -209,7 +209,7 @@ img {
     color: var(--accent-gray);
 }
 
-.open-info-btn {
+/* .open-info-btn {
     background: linear-gradient(90deg, var(--btn-bg), var(--btn-hover));
     color: #fff;
     border: none;
@@ -226,7 +226,7 @@ img {
     background: linear-gradient(90deg, var(--btn-hover), var(--btn-bg));
     box-shadow: 0 0 20px var(--btn-hover), 0 0 40px var(--btn-hover);
     transform: scale(1.1);
-}
+} */
 
 /* contact.html */
 
@@ -234,9 +234,14 @@ img {
     color: white;
 }
 
-.contact a {
+.mailContact a {
     text-decoration: none;
-    color: var(--accent-gray)
+    color: var(--accent-gray);
+    transition: 0.4s ease;
+}
+
+.mailContact a:hover {
+    color: #9797ad;
 }
 
 .carousel-Arc {
