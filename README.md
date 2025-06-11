@@ -40,5 +40,7 @@ This project was developed as the **final deliverable** for my web development c
 
 ---
 
+### 💟 Special thanks to <em>Lautaro Antriolo</em> for teaching me during this project!
+
 <h3 align="center">⚙Made by Dante Lombard</h3>
 
