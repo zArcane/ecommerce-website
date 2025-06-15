@@ -342,7 +342,7 @@ footer::before {
 }
 
 /* responsive para celus pequeños */
-@media (max-width: 320px) {
+@media (max-width: 400px) {
     .container {
         padding: 20px 10px;
     }
@@ -357,7 +357,7 @@ footer::before {
     }
 
     .navBar a {
-        margin: 2px;
+        margin: 0px;
     }
 
     main {
